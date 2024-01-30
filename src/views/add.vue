@@ -6,11 +6,17 @@
 		<!-- Content -->
 		<!-- <router-view /> -->
 	</div>
-	<div class="h-screen w-full bg-slate-500 flex flex-col justify-center items-center">
-		<div class="text-3xl italic text-cyan-400 underline">Add</div>
-		<!-- <Button></Button> -->
-		<Button class=" bg-red-600 text-black h-7 w-20">Click me</Button>
-	</div>
+	<div class="bg-[#8fbc8f] text-white flex flex-col p-10 w-full h-screen overflow-hidden">
+        <span class=" text-black text-3xl font-bold flex justify-start items-start">ADD CONDITION</span>
+		<span class=" text-black text-xl font-bold flex justify-start items-start">ADD CONDITION</span>
+        <!-- <div class="h-full w-full flex flex-col justify-center items-center gap-5"> -->
+            <!-- <Button class="w-80 h-16">Apply Condition</Button>
+            <Button class="w-80 h-16">Remove Condition</Button> -->
+        <!-- </div> -->
+        <div class="flex flex-col justify-end items-end">
+            <Button class="w-[200px] h-10">Back</Button>
+        </div>
+    </div>
 </template>
 
 <script setup>
