@@ -20,7 +20,7 @@ export const buttonVariants = cva(
 
 
 
-        green:"text-neutral-50 inline-flex justify-center items-center gap-[5px] px-[129px] py-[15px] rounded-lg bg-background-100 hover:scale-110 hover:bg-gradient-100 hover:opacity-80",
+        green:"text-neutral-50 bg-black inline-flex justify-center items-center gap-[5px] px-[129px] py-[15px] rounded-lg hover:scale-110 hover:bg-gradient-100 hover:opacity-80",
 
         black:"inline-flex h-[35px] justify-center items-center gap-[5px] shrink-0 px-[23px] py-[14.181px] rounded-[60px] bg-gray-800 text-neutral-50 hover:bg-gray-700 ",
         blackF:"inline-flex h-[35px] justify-center items-center gap-[5px] shrink-0 px-[23px] py-[14.181px] rounded-[60px] bg-gray-800 text-neutral-50 hover:bg-gray-700 ",

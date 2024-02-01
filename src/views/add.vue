@@ -8,11 +8,54 @@
 	</div>
 	<div class="bg-[#8fbc8f] text-white flex flex-col p-10 w-full h-screen overflow-hidden">
         <span class=" text-black text-3xl font-bold flex justify-start items-start">ADD CONDITION</span>
-		<span class=" text-black text-xl font-bold flex justify-start items-start">ADD CONDITION</span>
-        <!-- <div class="h-full w-full flex flex-col justify-center items-center gap-5"> -->
+        <div class="h-full w-full flex flex-col justify-center items-center gap-5 border-2 border-black">
+			
+			<div class=" w-[50%] flex flex-row justify-between items-center gap-5 my-10">
+				<span class=" text-black text-xl font-bold flex justify-start items-start">Type: </span>
+				<Select>
+					<SelectTrigger class="w-[80%] text-black">
+					<SelectValue class="text-black" placeholder="Select a fruit" />
+					</SelectTrigger>
+					<SelectContent>
+						<SelectGroup>
+							<SelectLabel>Fruits</SelectLabel>
+							<SelectItem value="apple">
+							Apple
+							</SelectItem>
+							<SelectItem value="banana">
+							Banana
+							</SelectItem>
+							<SelectItem value="blueberry">
+							Blueberry
+							</SelectItem>
+							<SelectItem value="grapes">
+							Grapes
+							</SelectItem>
+							<SelectItem value="pineapple">
+							Pineapple
+							</SelectItem>
+						</SelectGroup>
+					</SelectContent>
+				</Select>
+			</div>
+
+
+			<!-- <div className="grid w-full items-center gap-1.5"> -->
+				<div class="flex flex-row justify-center items-center gap-20 w-[50%] my-10">
+				<Label class="text-black text-xl font-bold flex justify-start items-start" htmlFor="picture">Picture:</Label>
+				<Input class="bg-black w-[80%]" id="picture" type="file" />
+				</div>
+			<!-- </div> -->
+			<div class="w-[50%] my-10 ">
+				<Progress v-model="progress" class="w-[100%] h-7" />
+			</div>
             <!-- <Button class="w-80 h-16">Apply Condition</Button>
             <Button class="w-80 h-16">Remove Condition</Button> -->
-        <!-- </div> -->
+			<div class="w-[50%] my-10 flex justify-between ">
+				<Button class="w-[200px] h-10">Process</Button>
+				<Button class="w-[200px] h-10">Exit</Button>
+			</div>
+        </div>
         <div class="flex flex-col justify-end items-end">
             <Button class="w-[200px] h-10">Back</Button>
         </div>
@@ -22,7 +65,25 @@
 <script setup>
 import Sidebar from '../components/sidebar.vue'
 import { Button } from '@/components/ui/button';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
+import { ref, watchEffect } from 'vue'
+import { Progress } from '@/components/ui/progress'
+
+const progress = ref(13)
+
+watchEffect((cleanupFn) => {
+  const timer = setTimeout(() => progress.value = 90, 100)
+  cleanupFn(() => clearTimeout(timer))
+})
 </script>
 
 <style lang="scss">
