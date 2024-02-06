@@ -17,18 +17,18 @@
 				<span class="material-icons">home</span>
 				<span class="text">Teller</span>
 			</router-link>
-			<router-link to="/about" class="button">
+			<router-link to="/menu" class="button">
 				<span class="material-icons">alt_route</span>
 				<span class="text">Add/Remove</span>
 			</router-link>
-			<!-- <router-link to="/team" class="button">
-				<span class="material-icons">group</span>
-				<span class="text">Team</span>
+			<router-link to="/add" class="button">
+				<span class="material-icons">add</span>
+				<span class="text">Add</span>
 			</router-link>
-			<router-link to="/contact" class="button">
-				<span class="material-icons">email</span>
-				<span class="text">Contact</span>
-			</router-link> -->
+			<router-link to="/remove" class="button">
+				<span class="material-icons">remove</span>
+				<span class="text">Remove</span>
+			</router-link>
 		</div>
 
 		<div class="flex"></div>

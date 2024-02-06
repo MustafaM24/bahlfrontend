@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <DropdownMenuTrigger class="outline-none bg-black" v-bind="props">
+  <DropdownMenuTrigger class="outline-none bg-black " v-bind="props">
     <slot />
   </DropdownMenuTrigger>
 </template>

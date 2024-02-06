@@ -30,9 +30,14 @@
                     <Input type="password" id="password" placeholder="password" class=" text-black bg-background-100 h-[30px]" />
                 </div>
                 <div class="flex flex-row justify-center items-baseline gap-20">
-                    <Button variant="default" class="mt-8 w-40">
+                    <!-- <Button variant="default" class="mt-8 w-40">
                         Sign In
-                    </Button>
+                    </Button> -->
+                    <router-link to="/">
+                        <Button variant="default" class="mt-8 w-40">
+                            Sign In
+                        </Button>
+                    </router-link>
                     <Button variant="default" class="mt-8 w-40">
                         Exit
                     </Button>

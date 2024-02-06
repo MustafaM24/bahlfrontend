@@ -9,11 +9,20 @@
 	<div class="bg-[#8fbc8f] text-white flex flex-col p-10 w-full h-screen overflow-hidden">
         <span class=" text-black text-3xl font-bold flex justify-start items-start">AL HABIB BANKING SYSTEM</span>
         <div class="h-full w-full flex flex-col justify-center items-center gap-5">
-            <Button class="w-80 h-16">Apply Condition</Button>
-            <Button class="w-80 h-16">Remove Condition</Button>
+			<router-link to="/add">
+				<Button class="w-80 h-16">Apply Condition</Button>
+			</router-link>
+			<router-link to="/remove">
+				<Button class="w-80 h-16">Remove Condition</Button>
+			</router-link>
+            
+            
         </div>
         <div class="flex flex-col justify-end items-end">
-            <Button class="w-[200px] h-10">Back</Button>
+			<router-link to="/teller">
+				<Button class="w-[200px] h-10">Back</Button>
+			</router-link>
+            <!-- <Button class="w-[200px] h-10">Back</Button> -->
         </div>
     </div>
 </template>

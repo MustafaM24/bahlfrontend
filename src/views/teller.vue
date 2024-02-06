@@ -8,20 +8,26 @@
 	</div>
 	<div class="bg-[#8fbc8f] text-white flex flex-col p-10 w-full h-screen overflow-hidden">
         <span class=" text-black text-3xl font-bold flex justify-start items-start">AL HABIB BANKING SYSTEM</span>
-        <div class="h-full w-full flex flex-col justify-center items-center">
-                <Button variant="green" class="w-80 h-16">Account Condition - Apply / Remove</Button>
+        <div class="h-full w-full flex flex-col justify-center items-center gap-10">
+			<router-link to="/menu">
+				<Button variant="green" class="w-80 h-16">Account Condition - Apply / Remove</Button>
+			</router-link>
+                <!-- <Button variant="green" class="w-80 h-16">Account Condition - Apply / Remove</Button> -->
+				<DropdownMenu class="flex flex-row justify-center items-center">
+					<DropdownMenuTrigger class="rounded-xl  h-12 w-40">Batch</DropdownMenuTrigger>
+					<DropdownMenuContent>
+						<!-- <DropdownMenuLabel>My Account</DropdownMenuLabel> -->
+						<!-- <DropdownMenuSeparator /> -->
+						<DropdownMenuItem>Open</DropdownMenuItem>
+						<DropdownMenuItem>Close</DropdownMenuItem>
+					</DropdownMenuContent>
+				</DropdownMenu>
         </div>
-		<DropdownMenu class="">
-			<DropdownMenuTrigger>Bach</DropdownMenuTrigger>
-			<DropdownMenuContent>
-				<!-- <DropdownMenuLabel>My Account</DropdownMenuLabel> -->
-				<!-- <DropdownMenuSeparator /> -->
-				<DropdownMenuItem>Open</DropdownMenuItem>
-				<DropdownMenuItem>Close</DropdownMenuItem>
-			</DropdownMenuContent>
-		</DropdownMenu>
         <div class="flex flex-col justify-end items-end">
-                <Button class="w-[200px] h-10">Exit</Button>
+			<router-link to="/login">
+				<Button class="w-[200px] h-10">Exit</Button>
+			</router-link>
+                <!-- <Button class="w-[200px] h-10">Exit</Button> -->
         </div>
     </div>
 </template>

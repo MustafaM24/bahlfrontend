@@ -52,12 +52,35 @@
             <!-- <Button class="w-80 h-16">Apply Condition</Button>
             <Button class="w-80 h-16">Remove Condition</Button> -->
 			<div class="w-[50%] my-10 flex justify-between ">
-				<Button class="w-[200px] h-10">Process</Button>
-				<Button class="w-[200px] h-10">Exit</Button>
+				<Dialog>
+					<DialogTrigger>
+						<Button class="w-[200px] h-10">Process</Button>
+					</DialogTrigger>
+					<DialogContent>
+					<DialogHeader>
+						<DialogTitle>Edit profile</DialogTitle>
+						<DialogDescription>
+						Make changes to your profile here. Click save when you're done.
+						</DialogDescription>
+					</DialogHeader>
+
+					<DialogFooter>
+						Save changes
+					</DialogFooter>
+					</DialogContent>
+				</Dialog>
+				<!-- <Button class="w-[200px] h-10">Process</Button> -->
+				<!-- <Button class="w-[200px] h-10">Exit</Button> -->
+				<router-link to="/login">
+					<Button class="w-[200px] h-10">Exit</Button>
+				</router-link>
 			</div>
         </div>
         <div class="flex flex-col justify-end items-end">
-            <Button class="w-[200px] h-10">Back</Button>
+			<router-link to="/menu">
+				<Button class="w-[200px] h-10">Back</Button>
+			</router-link>
+            <!-- <Button class="w-[200px] h-10">Back</Button> -->
         </div>
     </div>
 </template>
@@ -74,6 +97,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
 
 import { ref, watchEffect } from 'vue'
 import { Progress } from '@/components/ui/progress'
