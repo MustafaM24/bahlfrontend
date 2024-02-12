@@ -29,6 +29,7 @@
 			</router-link>
                 <!-- <Button class="w-[200px] h-10">Exit</Button> -->
         </div>
+		<div class="w-[106%] h-3 border-2 border-black -mx-10"></div>
     </div>
 </template>
 

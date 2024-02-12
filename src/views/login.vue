@@ -18,16 +18,16 @@
                 <div class="flex flex-row justify-between items-baseline">
                     <div class="space-y-2">
                         <Label class="text-l text-black mb-3"> Branch Code </Label>
-                        <Input type="brncd" placeholder="branch" class="text-black bg-background-100 h-[30px]" />
+                        <Input type="brncd" placeholder="branch" class="text-black bg-background-100 h-[30px]" @input="correctNumberInput" />
                     </div>
                     <div class="space-y-2">
                         <Label class="text-l text-black mb-3"> Username </Label>
-                        <Input type="password" placeholder="username" class="text-black bg-background-100 h-[30px]" />
+                        <Input type="username" placeholder="username" class="text-black bg-background-100 h-[30px]" @input="correctUsername" />
                     </div>
                 </div>
                 <div class="space-y-2">
                     <Label class="text-black"> Password</Label>
-                    <Input type="password" id="password" placeholder="password" class=" text-black bg-background-100 h-[30px]" />
+                    <Input type="password" id="password" placeholder="password" class=" text-black bg-background-100 h-[30px]" @input="correctPassword" />
                 </div>
                 <div class="flex flex-row justify-center items-baseline gap-20">
                     <!-- <Button variant="default" class="mt-8 w-40">
@@ -52,6 +52,53 @@ import Sidebar from '../components/sidebar.vue'
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
+
+const correctNumberInput = (event) => {
+    // Remove all non-digit characters
+    let originalValue = event.target.value.replace(/[^0-9]/g, "");
+
+    // Limit to maximum 4 digits
+    originalValue = originalValue.slice(0, 4);
+
+    // Update the input value
+    event.target.value = originalValue;
+
+    // Add a focus event listener to the input field
+    event.target.addEventListener('focusout', () => {
+        // Remove all non-digit characters
+        // let sanitizedValue = originalValue.replace(/[^0-9]/g, "");
+
+        // Pad with "0" if the length is less than 4 digits
+        originalValue = originalValue.padStart(4, '0');
+
+        // Limit to maximum 4 digits
+        // sanitizedValue = sanitizedValue.slice(0, 4);
+
+        // Update the input value
+        event.target.value = originalValue;
+    });
+}
+
+const correctUsername = (event) => {
+    // Remove all characters after the 9th character
+    let sanitizedValue = event.target.value.slice(0, 9);
+
+    // Replace all characters with "X"
+    sanitizedValue = sanitizedValue.replace(/./g, "X");
+
+    // Update the input value
+    event.target.value = sanitizedValue;
+}
+
+const correctPassword = (event) => {
+    // Remove all characters after the 9th character
+    let sanitizedValue = event.target.value.slice(0, 11);
+
+    // Update the input value
+    event.target.value = sanitizedValue;
+}
+
+
 
 </script>
 
